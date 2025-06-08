@@ -35,7 +35,7 @@ if (!fs.existsSync(uploadsDir)) {
 
 // Helper function to execute C++ program
 async function executeCppProgram(operation, inputFile, outputFile, key) {
-  const cppExecutable = path.join(__dirname, '..', 'cpp-backend', 'encryptor');
+  const cppExecutable = path.join(__dirname, '.', 'cpp-backend', 'encryptor');
   
   try {
     const { stdout, stderr } = await execAsync(`"${cppExecutable}" ${operation} "${inputFile}" "${outputFile}" "${key}"`);
